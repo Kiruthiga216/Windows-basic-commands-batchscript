@@ -1,5 +1,7 @@
 # Windows-basic-commands-batchscript
 Ex08-Windows-basic-commands-batchscript
+# Name: Kiruthiga.B
+# Reg.no:212224040160
 
 # AIM:
 To execute Windows basic commands and batch scripting
@@ -25,50 +27,89 @@ Execute the necessary commands/batch file for the desired output.
 Create a directory named "my-folder"
 
 ## COMMAND AND OUTPUT
+```
+mkdir my-folder
+```
+
 
 Remove the directory "my-folder"
 
 ## COMMAND AND OUTPUT
+```
+rmdir my-folder
+
+```
 
 
 Create the file Rose.txt
 
 ## COMMAND AND OUTPUT
+```
+COPY CON Rose.txt
+dir Rose.txt
+
+
+```
 
 
 Create the file hello.txt using echo and redirection
 
 ## COMMAND AND OUTPUT
+```
+echo “hello world” > hello.txt
+type hello.txt
+
+```
 
 Copy the file hello.txt into the file hello1.txt
 
 ## COMMAND AND OUTPUT
+```
+copy hello.txt hello1.txt
+
+```
 
 Remove the file hello1.txt
 
 ## COMMAND AND OUTPUT
+```
+del hello1.txt
+dir hello1.txt
+
+```
 
 List out the file hello1.txt in the current directory
 
 ## COMMAND AND OUTPUT
+```
+assoc | more
 
-List out all the associated file extensions 
-
-## COMMAND AND OUTPUT
-
-
+```
 Compare the file hello.txt and rose.txt
 
 ## COMMAND AND OUTPUT
+```
+fc hello.txt Rose.txt
+
+```
 
 ## Exercise 2: Advanced Batch Scripting
 Create a batch file named on the desktop. The batch file need to have a variable assigned with a desired name for ex. name="John" and display as "Hello, John".
 
+```
 
+@echo off
+mkdir %userprofile%\Desktop\DocBackup
+copy %userprofile%\Documents\*.docx %userprofile%\Desktop\DocBackup
+echo Backup completed successfully!
+```
 
 
 
 ## OUTPUT
+
+![image](https://github.com/user-attachments/assets/6aaadeb8-b465-4852-8f46-003159cf917e)
+
 
 
 
@@ -80,9 +121,17 @@ Ask the user if they want to check another number.
 Repeat the process if the user enters Y, and exit with a thank-you message if the user enters N.
 Handle invalid inputs for the continuation prompt (Y/N) gracefully.
 
-
+```
+  @echo off
+  mkdir %userprofile%\Desktop\DocBackup
+  copy %userprofile%\Documents\*.docx %userprofile%\Desktop\DocBackup
+  del %userprofile%\Documents\*.docx
+  echo Backup and deletion completed successfully!
+```
 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/625c8e98-4813-4356-8d8e-51fc9854ada5)
+
 
 
 
